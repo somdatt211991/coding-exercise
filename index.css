@@ -1,0 +1,110 @@
+:root {
+  --color-black: #000000;
+  --color-dark-grey: #909090;
+  --color-white: #ffffff;
+  --color-light-grey: #efefef;
+  --color-moroccan-blue: #2b8ead;
+  --color-dark-moroccan-blue: #6f98a8;
+  --color-light-grey: #f2f2f2;
+  --color-dark-blue: #2f454e;
+  --color-grey: #999999;
+  --color-button: #07c3fa;
+  --token: 2px;
+}
+
+article .container {
+  height: auto;
+  display: flex;
+  background-color: var(--color-light-grey);
+  border-top: calc(var(--token) * 2) solid var(--color-grey);
+  border-radius: var(--token);
+}
+
+article {
+  width: 80%;
+  margin: calc(var(--token) * 50) auto;
+  height: auto;
+  text-align: center;
+}
+
+.container ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  height: auto;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container .box {
+  width: 80%;
+  border-right: 1px solid grey;
+}
+
+ul li {
+  flex: 1 0 30%;
+  height: calc(var(--token) * 50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--token) * 20);
+  color: var(--color-white);
+}
+
+.button-color {
+  background-color: var(--color-button);
+  color: var(--color-white);
+  border-color: transparent;
+  margin: calc(var(--token) * 5);
+}
+button{
+    border-radius: 2px;
+}
+
+.button-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .box{
+        width:100%;
+    }
+    #content .container{
+        display: inline-flex ;
+        background-color: transparent;
+        border-top: none;
+        margin-top:40px;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .container ul {
+        display: inline-block;
+    }
+    #content .box{
+        border-right: 0px ;
+    }
+    #content ul{
+        display: block;
+    }
+    #content ul li {
+        height: auto;
+        margin-bottom: 5px;
+        color: var(--color-black);
+        font-size: 15px;
+        background-color: var(--color-light-grey) !important;
+        padding: 0px;
+    }
+    
+    #content ul li span {
+        margin-left:50%;
+    }
+    #content .button-container{
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+}
